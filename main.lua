@@ -13,54 +13,23 @@
 -- Your code here
 
 -- create my local variables
-local nameOfTriangleText = Triangle 
-local textSize = 12
-local myTriangle
-local vertices
-local polygon
-
-local nameOfOctagonText = Octagon
-local myOctagon
-
-local nameOfPentagonText = Octagon
-local myPentagon
-
-local nameOfParralelogramText = Octagon
-local myParralelogram
-
-local nameOfRhombusText = Octagon
-local myRhombus
 
 -- set the backround color of my screen
-display.setDefault ("background", 0/255, 0/255, 0/255)
+display.setDefault ("background", 126/255, 104/255, 238/255)
 
--- remove status bar 
+-- remove status bar
 display.setStatusBar(display.HiddenStatusBar)
+ 
+-- create local variables for parralelogram
+local halfW = display.contentWidth * 0.5
+local halfH = display.contentHeight * 0.5
+local vertices = {0, -110}
+local parralelogram = display.newPolygon(halfW, halfH, vertices)
 
--- draw the triangle 
-local vertices = { 0, 110, 15, 120, -15, 55}
-local myTriangle = display.newPolygon (vertices)
-
--- anchor the triangle and set it's (x,y) position
-myTriangle.anchorX = 0
-myTriangle.anchorY = 0
-myTriangle.x = 20
-myTriangle.y = 20 
-
--- set width of the border
-myTriangle.strokeWidth = 10
-
--- set color of rectangle
-myTriangle:setFillColor(0.4, 0.1, 0.8)
-
--- set color of the border
-myTriangle:setStrokeColor(0, 0, 1)
-
-
-
-
-
-
+-- display parralelogram
+parralelogram:setFillColor( 0/255, 0/255, 0/255)
+parralelogram.strokeWidth = 10
+parralelogram:setStrokeColor( 255/255, 255/255, 255/255)
 
 
 
