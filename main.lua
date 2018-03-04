@@ -1,40 +1,49 @@
------------------------------------------------------------------------------------------
--- Title: DrawingShapesInLua
+-- Title: Drawing Shapes in Lua
 -- Name: Avery Mack
 -- Course: ICS20/3C
--- This program displays a triangle, an 
--- octagon, a pentagon, a parralelogram, and
--- a rhombus along with their names
-
+-- This program displays four shapes and writes 
+-- their name underneath 
+--
 -- main.lua
 --
------------------------------------------------------------------------------------------
+------------------------------------------------
 
--- Your code here
+-- Your code here 
 
--- create my local variables
+-- set the background color of my screen
+display.setDefault ("background", 167/255, 160/255, 238/255)
 
--- set the backround color of my screen
-display.setDefault ("background", 126/255, 104/255, 238/255)
-
--- remove status bar
+-- to remove status bar
 display.setStatusBar(display.HiddenStatusBar)
- 
--- create local variables for parralelogram
+
+-- set local varibles for parralelogram
 local halfW = display.contentWidth * 0.5
 local halfH = display.contentHeight * 0.5
-local vertices = {0, -110}
-local parralelogram = display.newPolygon(halfW, halfH, vertices)
+local vertices = { }
+local parralelogram = display.newPolygon( halfW, halfH, vertices )
 
 -- display parralelogram
 parralelogram:setFillColor( 0/255, 0/255, 0/255)
 parralelogram.strokeWidth = 10
 parralelogram:setStrokeColor( 255/255, 255/255, 255/255)
 
+-- set local variables for pentagon
+local vertices = {  }
+local pentagon = display.newPolygon( halfW, halfH, vertices )
 
+-- display pentagon
+pentagon:setFillColor(0/255, 0/255, 0/255)
+pentagon.strokeWidth = 10
+pentagon:setStrokeColor( 255/255, 255/255, 255/255 )
 
+-- set local variables for rhombus
+local vertices = {  }
+local rhombus = display.newPolygon( halfW, halfH, vertices )
 
-
+-- display rhombus
+rhombus:setFillColor(0/255, 0/255, 0/255)
+rhombus.strokeWidth = 10
+rhombus:setStrokeColor( 255/255, 255/255, 255/255 )
 
 
 
