@@ -191,8 +191,8 @@ print ("By Avery Mack")
 -- declare a local variable
 local textObjectSignature
 
--- create the text object with a text size of 20
-textObjectSignature = display.newText ("By Avery Mack", 25, 50, nil, 20)
+-- create the text object with a text size of 14
+textObjectSignature = display.newText ("By Avery Mack", 25, 50, nil, 14)
 
 -- set the color of the text object
 textObjectSignature:setFillColor (255/255, 255/255, 255/255)
@@ -204,16 +204,27 @@ textObjectSignature.x = 50
 textObjectSignature.y = 300
 
 -- create local variables for the area of the triangle
-local baseOfTraingle = 5
+local baseOfTriangle = 5
+local myTriangle
 local heightOfTriangle = 10 
-local areaOfTriangle = baseOfTraingle * heightOfTriangle / 2
+local areaTextTriangle 
+local areaOfTriangle
+local textSize = 12
 
--- write the area on the screen 
-areaOfTraingle = display.newText("The area of this triangle \n 
-	")
+-- calculate the area
+areaOfTriangle = baseOfTriangle * heightOfTriangle / 2
+
+-- write the area of the triangle on the screen
+areaTextTriangle = display.newText("The area of this triangle with a base of \n" 
+	.. baseOfTriangle .. " and a height of \n" .. heightOfTriangle ..
+	" is " .. areaOfTriangle .. "  pixels². ", 0, 0, Arial, textSize)
 
 
-
+-- anchor the text and set its (x,y) position
+areaTextTriangle.anchorX = 0
+areaTextTriangle.anchorY = 0
+areaTextTriangle.x = 260
+areaTextTriangle.y = 160
 
 
 
