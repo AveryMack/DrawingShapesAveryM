@@ -13,7 +13,7 @@
 -- Your code here 
 
 -- set the background color of my screen
-display.setDefault ("background", 167/255, 160/255, 238/255)
+display.setDefault ("background", 134/255, 122/255, 230/255)
 
 -- to remove status bar
 display.setStatusBar(display.HiddenStatusBar)
@@ -124,7 +124,7 @@ local vertices = { 20,10, 50,10, 60,30, 50,50, 20,50, 10,30}
 local hexagon = display.newPolygon( halfW, halfH, vertices )
 
 -- display hexagon
-hexagon:setFillColor(0/255, 174/255, 0/255)
+hexagon:setFillColor(0/255, 128/255, 0/255)
 hexagon.strokeWidth = 10
 hexagon:setStrokeColor( 255/255, 255/255, 255/255 )
 
@@ -144,13 +144,77 @@ local textObjectHexagon
 textObjectHexagon = display.newText ("hexagon", 25, 50, nil, 14)
 
 -- set the color of the text object
-textObjectHexagon:setFillColor (0/255, 174/255, 0/255)
+textObjectHexagon:setFillColor (0/255, 74/255, 0/255)
 
 -- anchor the text object
 textObjectHexagon.anchorX = 0
 textObjectHexagon.anchorY = 0
 textObjectHexagon.x = 40
 textObjectHexagon.y = 200
+
+-- set local variables for the triangle
+local vertices = { 0,0, 20,50, 80,0}
+local triangle = display.newPolygon( halfW, halfH, vertices )
+
+-- display triangle
+triangle:setFillColor(0/255, 0/255, 238/255)
+triangle.strokeWidth = 10
+triangle:setStrokeColor( 255/255, 255/255, 255/255 )
+
+-- anchor the triangle
+triangle.anchorX = 0 
+triangle.anchorY = 0
+triangle.x = 160
+triangle.y = 135
+
+-- print its name to the console
+print ("triangle")
+
+-- declare a local variable
+local textObjectTriangle
+
+-- create the text object with a text size of 14
+textObjectTriangle = display.newText ("triangle", 25, 50, nil, 14)
+
+-- set the color of the text object
+textObjectTriangle:setFillColor (0/255, 0/255, 238/255)
+
+-- anchor the text object
+textObjectTriangle.anchorX = 0
+textObjectTriangle.anchorY = 0
+textObjectTriangle.x = 170
+textObjectTriangle.y = 200
+
+-- print my name to the console
+print ("By Avery Mack")
+
+-- declare a local variable
+local textObjectSignature
+
+-- create the text object with a text size of 20
+textObjectSignature = display.newText ("By Avery Mack", 25, 50, nil, 20)
+
+-- set the color of the text object
+textObjectSignature:setFillColor (255/255, 255/255, 255/255)
+
+-- anchor the text object
+textObjectSignature.anchorX = 0
+textObjectSignature.anchorY = 0
+textObjectSignature.x = 50
+textObjectSignature.y = 300
+
+-- create local variables for the area of the triangle
+local baseOfTraingle = 5
+local heightOfTriangle = 10 
+local areaOfTriangle = baseOfTraingle * heightOfTriangle / 2
+
+-- write the area on the screen 
+areaOfTraingle = display.newText("The area of this triangle \n 
+	")
+
+
+
+
 
 
 
